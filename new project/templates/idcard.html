@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student ID Card</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="card" style="width:400px;margin:auto;text-align:center;border:2px solid #000;padding:20px;">
+
+    <h2>📚 GS LIBRARY</h2>
+
+    <h4>Student Identity Card</h4>
+
+    <hr>
+
+<img src="{{ url_for('static', filename='student_photos/' + student.photo) }}"
+     width="120"
+     height="120"
+     style="border-radius:50%;">
+
+    <br><br>
+    <h3>ID : GS{{ "%04d"|format(student.id) }}</h3>
+
+    <h3>{{ student.name }}</h3>
+
+    <p><b>Mobile :</b> {{ student.mobile }}</p>
+
+    <p><b>Seat :</b> {{ student.seat }}</p>
+
+    <p><b>Shift :</b> {{ student.shift }}</p>
+
+    <p><b>Father :</b> {{ student.father }}</p>
+
+    <p><b>Director :</b> Gautam Sir</p>
+
+    <p><b>Status :</b> Active Student</p>
+
+<p><b>Library :</b> GS Library</p>
+
+    <hr>
+
+    <button onclick="window.print()">
+
+    <hr>
+
+    <h4>Knowledge | Discipline | Success</h4>
+
+        🖨 Print ID Card
+
+    </button>
+
+    <br><br>
+
+    <a class="btn" href="/dashboard">
+
+        ⬅ Back
+
+    </a>
+
+</div>
+
+</body>
+
+</html>

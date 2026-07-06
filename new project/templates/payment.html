@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pay Fee</title>
+
+</head>
+
+<body>
+
+<h2>Monthly Fee Payment</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <label>Month</label>
+
+    <br><br>
+
+    <select name="month">
+
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+
+    </select>
+
+    <br><br>
+
+    <label>Amount</label>
+
+    <br><br>
+
+    <input type="number"
+           name="amount"
+           value="500"
+           readonly>
+
+    <br><br>
+
+    <hr>
+
+    <h3>📱 Scan QR Code</h3>
+    <hr>
+
+<label>Upload Payment Screenshot</label>
+
+<br><br>
+
+<input type="file" name="screenshot">
+
+<br><br>
+
+    <img src="{{ url_for('static', filename='images/qr.jpg') }}" width="250">
+
+    <br><br>
+
+    <p><b>UPI ID :</b> gslibrary@upi</p>
+
+    <p>Scan this QR using PhonePe / Google Pay / Paytm</p>
+
+    <hr>
+
+    <button type="submit">
+
+        Pay Fee
+
+    </button>
+
+</form>
+
+</body>
+
+</html>

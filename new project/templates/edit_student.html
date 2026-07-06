@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Edit Student</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>✏ Edit Student</h2>
+
+<form method="POST">
+
+Name
+
+<br>
+
+<input
+type="text"
+name="name"
+value="{{ student.name }}">
+
+<br><br>
+
+Mobile
+
+<br>
+
+<input
+type="text"
+name="mobile"
+value="{{ student.mobile }}">
+
+<br><br>
+
+Father
+
+<br>
+
+<input
+type="text"
+name="father"
+value="{{ student.father }}">
+
+<br><br>
+
+Mother
+
+<br>
+
+<input
+type="text"
+name="mother"
+value="{{ student.mother }}">
+
+<br><br>
+
+Address
+
+<br>
+
+<textarea
+name="address">{{ student.address }}</textarea>
+
+<br><br>
+
+Shift
+
+<br>
+
+<input
+type="text"
+name="shift"
+value="{{ student.shift }}">
+
+<br><br>
+
+Seat
+
+<br>
+
+<input
+type="text"
+name="seat"
+value="{{ student.seat }}">
+
+<br><br>
+
+<button class="btn">
+
+💾 Update Student
+
+</button>
+
+</form>
+
+<br>
+
+<a class="btn"
+href="/students">
+
+⬅ Back
+
+</a>
+
+</div>
+
+</body>
+
+</html>

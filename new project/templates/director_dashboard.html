@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Director Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>📚 GS Library Director Panel</h2>
+
+</div>
+
+<div class="card">
+
+<h2>Welcome Director</h2>
+
+<h3>👨‍🎓 Total Students : {{ students|length }}</h3>
+
+<h3>📚 Total Books : {{ books|length }}</h3>
+
+<h3>💳 Total Payments : {{ fees|length }}</h3>
+
+<hr>
+
+<a class="btn" href="/students">👨‍🎓 Manage Students</a>
+
+<br><br>
+
+<a class="btn" href="/books">📚 Manage Books</a>
+
+<br><br>
+
+<a class="btn" href="/paymenthistory">💳 Payment History</a>
+
+<br><br>
+
+<a class="btn" href="/logout">🚪 Logout</a>
+
+</div>
+
+</body>
+
+</html>

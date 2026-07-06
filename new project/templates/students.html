@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>👨‍🎓 All Students</h2>
+</div>
+
+<div class="card">
+    <form action="/search-student" method="GET">
+
+    <input
+        type="text"
+        name="keyword"
+        placeholder="Search Name / Mobile / Seat"
+        required>
+
+    <button class="btn" type="submit">
+        🔍 Search
+    </button>
+
+</form>
+    <a class="btn" href="/students">
+Show All Students
+</a>
+
+<br>
+
+<table border="1" cellpadding="10" width="100%">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Mobile</th>
+    <th>Seat</th>
+    <th>Shift</th>
+    <th>Action</th>
+</tr>
+
+{% for student in students %}
+
+<tr>
+
+<td>{{ student.id }}</td>
+<td>{{ student.name }}</td>
+<td>{{ student.mobile }}</td>
+<td>{{ student.seat }}</td>
+<td>{{ student.shift }}</td>
+
+<td>
+
+<a class="btn" href="/changeseat/{{ student.id }}">
+🪑 Change Seat
+</a>
+
+<br><br>
+
+<a class="btn" href="/idcard/{{ student.id }}">
+🪪 ID Card
+</a>
+
+<br><br>
+    <a class="btn" href="/edit-student/{{ student.id }}">
+✏ Edit
+</a>
+
+<br><br>
+
+<a class="btn"
+href="/delete-student/{{ student.id }}"
+onclick="return confirm('Delete Student ?')">
+🗑 Delete
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a class="btn" href="/director-dashboard">
+⬅ Back
+</a>
+
+</div>
+
+</body>
+</html>

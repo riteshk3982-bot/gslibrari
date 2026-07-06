@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Payment History</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<h2>📄 Payment History</h2>
+
+</div>
+
+<div class="card">
+
+<h2>Your Payment History</h2>
+
+<table border="1" cellpadding="10" cellspacing="0">
+
+<tr>
+
+<th>Month</th>
+<th>Amount</th>
+<th>Status</th>
+<th>Screenshot</th>
+
+</tr>
+
+{% for fee in fees %}
+
+<tr>
+
+<td>{{ fee.month }}</td>
+
+<td>₹{{ fee.amount }}</td>
+
+<td>{{ fee.status }}</td>
+
+<td>
+
+{% if fee.screenshot %}
+
+<img src="{{ url_for('static', filename='payments/' + fee.screenshot) }}" width="120">
+
+{% else %}
+
+No Screenshot
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br><br>
+
+<a class="btn" href="/dashboard">⬅ Back</a>
+
+</div>
+
+</body>
+
+</html>

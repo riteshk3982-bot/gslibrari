@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books List</title>
+</head>
+<body>
+
+<h1>Library Books</h1>
+
+<a href="/addbook">
+    <button>Add New Book</button>
+</a>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>ID</th>
+    <th>Book Name</th>
+    <th>Author</th>
+    <th>Category</th>
+    <th>Quantity</th>
+</tr>
+
+{% for book in books %}
+
+<tr>
+
+<td>{{ book.id }}</td>
+
+<td>{{ book.book_name }}</td>
+
+<td>{{ book.author }}</td>
+
+<td>{{ book.category }}</td>
+
+<td>{{ book.quantity }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

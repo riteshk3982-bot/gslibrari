@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student Registration</title>
+</head>
+
+<body>
+
+<h2>New Student Registration</h2>
+
+<form
+id="otpForm"
+method="POST"
+action="/new-registration">
+
+    <label>Mobile Number</label>
+    <br><br>
+
+    <input
+        type="text"
+        id="mobile"
+        name="mobile"
+        required>
+
+    <br><br>
+
+    <input
+        type="hidden"
+        id="access_token"
+        name="access_token">
+
+    <button
+        type="button"
+        id="verifyBtn">
+
+        Verify Mobile
+
+    </button>
+
+</form>
+
+<script>
+
+var configuration = {
+
+    widgetId: "366765696945373630393635",
+
+    tokenAuth: "547607TDNgtHYl786a4a0269P1",
+
+    identifier: "",
+
+success: function(data){
+
+    document.getElementById("otpForm").submit();
+
+},
+
+    failure: function(error){
+
+        console.log(error);
+
+        alert(JSON.stringify(error));
+
+    }
+
+};
+
+document.getElementById("verifyBtn").onclick = function(){
+
+    configuration.identifier = document.getElementById("mobile").value;
+
+    window.initSendOTP(configuration);
+
+}
+
+</script>
+<script>
+window.onload = function () {
+    console.log("initSendOTP =", typeof window.initSendOTP);
+};
+</script>
+
+<script src="https://verify.msg91.com/otp-provider.js"></script>
+
+</body>
+
+</html>

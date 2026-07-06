@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fee Receipt</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>📚 GS LIBRARY</h1>
+
+<h2>Fee Payment Receipt</h2>
+
+<hr>
+
+{% if fee %}
+
+<p><b>Receipt No :</b> GS{{ fee.id }}</p>
+
+<p><b>Name :</b> {{ student.name }}</p>
+
+<p><b>Mobile :</b> {{ student.mobile }}</p>
+
+<p><b>Month :</b> {{ fee.month }}</p>
+
+<p><b>Amount :</b> ₹{{ fee.amount }}</p>
+
+<p><b>Status :</b> {{ fee.status }}</p>
+
+<p><b>Director :</b> Gautam Sir</p>
+
+<hr>
+
+<button onclick="window.print()">
+
+🖨 Print Receipt
+
+</button>
+
+{% else %}
+
+<h3>No Payment Found</h3>
+
+<p>Please pay your monthly fee first.</p>
+
+{% endif %}
+
+<br><br>
+
+<a class="btn" href="/dashboard">
+
+⬅ Back
+
+</a>
+
+</div>
+
+</body>
+
+</html>

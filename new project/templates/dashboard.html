@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+<div class="navbar">
+
+    <h2>📚 YOUR LIBRARY NAME</h2>
+
+    <div>
+
+        <a href="/dashboard">Home</a>
+        <a href="/my-idcard">
+    🪪 My ID Card
+</a>
+
+        <a href="/students">Students</a>
+
+        <a href="/addbook">Add Book</a>
+
+        <a href="/books">Books</a>
+        <a href="/students">
+
+📋 All Students
+
+</a>
+
+        <a href="/logout">Logout</a>
+
+    </div>
+
+</div>
+<div class="header">
+
+<h1>📚G S LIBRARY</h1>
+
+<p>Welcome {{ student.name }}</p>
+
+</div>
+
+<div class="card">
+<hr>
+
+<h2>Contact Us</h2>
+
+<p>📍 Address : Pahadevajeet </p>
+
+<p>📞 Mobile : 9910596544</p>
+
+<p>📧 Email : gslibrary@gmail.com</p>
+
+<p>👨‍🏫 <b>Director :</b> Gautam Sir</p>
+
+
+<h2>Student Information</h2>
+
+<div class="info">
+
+<b>Name :</b> {{ student.name }}
+
+</div>
+
+<div class="info">
+<b>Mobile :</b> {{ student.mobile }}
+</div>
+
+<div class="info">
+<b>Father :</b> {{ student.father }}
+</div>
+
+<div class="info">
+<b>Mother :</b> {{ student.mother }}
+</div>
+
+<div class="info">
+<b>Address :</b> {{ student.address }}
+</div>
+
+<div class="info">
+<b>Shift :</b> {{ student.shift }}
+</div>
+
+<div class="info">
+<b>Seat :</b> {{ student.seat }}
+</div>
+
+<hr>
+
+
+<a class="btn" href="/students">👨‍🎓 Students</a>
+
+<a class="btn" href="/addbook">📚 Add Book</a>
+
+<a class="btn" href="/books">📖 View Books</a>
+
+<a class="btn" href="/payment">💳 Pay Fee</a>
+
+<a class="btn" href="/paymenthistory">📄 Payment History</a>
+
+<a class="btn" href="/my-idcard">🪪 Student ID Card</a>
+<a class="btn" href="/receipt">🧾 Fee Receipt</a>
+
+
+<a class="btn" href="/logout">🚪 Logout</a>
+
+</div>
+<div class="footer">
+
+© 2026 GS Library | All Rights Reserved
+
+</div>
+
+</body>
+</html>

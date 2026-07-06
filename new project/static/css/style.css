@@ -1,0 +1,447 @@
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, sans-serif;
+    background:#f4f6f9;
+}
+
+.header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+.header{
+    background-image:url("../css/images/library.jpg");
+    background-size:cover;
+    background-position:center;
+    padding:100px 20px;
+    text-align:center;
+    color:white;
+}
+
+.card{
+    width:80%;
+    margin:30px auto;
+    background:white;
+    border-radius:10px;
+    padding:25px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.2);
+}
+
+.btn{
+    background:#0d6efd;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:8px;
+    margin:5px;
+    display:inline-block;
+}
+
+.btn:hover{
+    background:#084298;
+}
+/* Navigation Bar */
+
+.navbar{
+
+    background:#0d6efd;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 40px;
+}
+
+.navbar h2{
+
+    margin:0;
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:20px;
+
+    font-size:18px;
+
+    font-weight:bold;
+}
+
+.navbar a:hover{
+
+    color:yellow;
+}
+.info{
+
+    background:#ffffff;
+
+    border-left:5px solid #0d6efd;
+
+    margin:10px 0;
+
+    padding:12px;
+
+    border-radius:8px;
+}
+.card h2{
+    color:#0d6efd;
+}
+
+.card h3{
+    color:#198754;
+}
+
+.card p{
+    font-size:18px;
+    line-height:28px;
+}
+
+.card{
+    animation: fade 0.7s;
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0px);
+
+}
+
+}
+/* ================= NAVBAR ================= */
+
+.navbar{
+
+    background:#212529;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 40px;
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:bold;
+}
+
+.menu a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:25px;
+
+    font-size:18px;
+
+    transition:.3s;
+}
+
+.menu a:hover{
+
+    color:#ffc107;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+
+    background:#212529;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+}
+
+/* ================= CONTACT CARD ================= */
+
+.contact{
+
+    background:white;
+
+    width:80%;
+
+    margin:30px auto;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    box-shadow:0px 0px 15px rgba(0,0,0,.2);
+}
+.navbar{
+    background:#0d6efd;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.logo{
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+}
+
+.menu a:hover{
+    color:yellow;
+}
+
+.hero{
+    background:url("../images/library.jpg");
+    background-size:cover;
+    background-position:center;
+    padding:120px;
+    text-align:center;
+    color:white;
+}
+
+.logo-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:white;
+    padding:10px;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    font-size:22px;
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+}
+
+.logo img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid white;
+}
+
+.btn{
+    background:#2563eb;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    margin:10px;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:15px 25px;
+
+    flex-wrap:wrap;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:15px;
+
+    font-weight:bold;
+
+}
+
+.card{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:25px auto;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    box-shadow:0px 0px 10px lightgray;
+
+}
+
+.btn{
+
+    display:inline-block;
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    margin:8px;
+
+}
+
+.btn:hover{
+
+    background:#084298;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+table th{
+
+    background:#0d6efd;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+table td{
+
+    padding:10px;
+
+    border:1px solid #ddd;
+
+}
+
+img{
+
+    max-width:100%;
+
+}
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:768px){
+
+.navbar{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.navbar a{
+
+display:block;
+
+margin:10px 0;
+
+}
+
+.card{
+
+width:95%;
+
+}
+
+table{
+
+display:block;
+
+overflow-x:auto;
+
+}
+
+.btn{
+
+display:block;
+
+width:100%;
+
+margin-top:10px;
+
+text-align:center;
+
+}
+
+}
